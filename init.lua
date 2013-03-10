@@ -14,6 +14,15 @@
 --Disponible uniquement pour le(s) administrateur(s) : utiliser /giveme seve:seve_source
 --pour obtenir de la sève
 
+minetest.register_craft ({
+	output = "fluide:seve_source",
+	recipe = {
+		{"","default:mese",""},
+		{"","default:mese",""},
+		{"","bucket:bucket_water",""},
+	}
+})
+	
 --*********************
 --Parametres du liquide
 --*********************
