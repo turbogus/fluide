@@ -258,54 +258,12 @@ minetest.register_node("fluide:gazole_source", {			-- Declaration du nom de l'it
 -- test pour bucket
 -------------------
 
-bucket = {}
-bucket.liquids = {}
-
-function bucket.register_liquid(source, flowing, itemname, inventory_image)
-	bucket.liquids[source] = {
-		source = "fluide:gazole_source",
-		flowing = "fluide:gazole_flowing",
-		itemname = "fluide:bucket_gazole",
-		inventory_image = "bucket_gazole.png",
-	}
-	bucket.liquids[flowing] = bucket.liquids[source]
-
-	if itemname ~= nil then
-		minetest.register_craftitem(itemname, {
-			inventory_image = inventory_image,
-			stack_max = 1,
-			liquids_pointable = true,
-			on_use = function(itemstack, user, pointed_thing)
-				-- Must be pointing to node
-				if pointed_thing.type ~= "node" then
-					return
-				end
-				-- Check if pointing to a liquid
-				n = minetest.env:get_node(pointed_thing.under)
-				if bucket.liquids[n.name] ~= nil then
-					-- Not a liquid
-					minetest.env:add_node(pointed_thing.above, {name=source})
-				elseif n.name == source then
-					-- It's a liquid
-					minetest.env:add_node(pointed_thing.under, {name=source})
-				end
-				return {name="bucket:bucket_empty"}
-			end
-		})
-	end
-end
-
 bucket.register_liquid(
-
 	"fluide:gazole_source",
 	"fluide:gazole_flowing",
 	"fluide:gazole_bucket",
 	"bucket_gazole.png"
-	
-	--"default:water_source",
-	--"default:water_flowing",
-	--"bucket:bucket_water",
-	--"bucket_water.png"
+
 )
 
 
