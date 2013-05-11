@@ -258,13 +258,7 @@ minetest.register_node("fluide:gazole_source", {			-- Declaration du nom de l'it
 -- test pour bucket
 -------------------
 
-bucket.register_liquid(
-	"fluide:gazole_source",
-	"fluide:gazole_flowing",
-	"fluide:gazole_bucket",
-	"bucket_gazole.png"
 
-)
 
 
 
