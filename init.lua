@@ -116,6 +116,14 @@ minetest.register_abm(									-- fonction permettant d'assigner une action à u
 
 -- Fluide qui vous tue en un seul coup si vous le touchez
 
+minetest.register_craft ({
+	output = "fluide:or_source",
+	recipe = {
+		{"","default:mese",""},
+		{"","default:mese",""},
+		{"","bucket:bucket_lava",""},
+	}
+})
 
 --**********************************************
 --Gestion écoulement du liquide ( or_flowing )
@@ -273,15 +281,6 @@ bucket.register_liquid(
 	"bucket_seve.png",
 	"Seve Bucket"
 )
-
-bucket.register_liquid(
-	"fluide:or_source",
-	"fluide:or_flowing",
-	"fluide:bucket_or",
-	"bucket_or.png",
-	"Or Bucket"
-)
-
 
 
 
