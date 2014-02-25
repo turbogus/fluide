@@ -54,7 +54,7 @@ minetest.register_node("fluide:seve_flowing", {			-- on enregistre le nom de l'i
 	liquid_alternative_flowing = "fluide:seve_flowing",	-- //
 	liquid_alternative_source = "fluide:seve_source",	-- //
 	liquid_viscosity = WATER_VISC,				-- //
-	post_effect_color = {a=64, r=100, g=100, b=200},	-- //
+	post_effect_color = {a=64, r=255, g=114, b=0},	-- //
 	groups = {water=3, liquid=3, puts_out_fire=1},		-- //
 	
 	
@@ -85,7 +85,7 @@ minetest.register_node("fluide:seve_source", {			-- Declaration du nom de l'item
 	liquid_alternative_flowing = "fluide:seve_flowing",	-- //
 	liquid_alternative_source = "fluide:seve_source",	-- //
 	liquid_viscosity = WATER_VISC,				-- //
-	post_effect_color = {a=64, r=100, g=100, b=200},	-- //
+	post_effect_color = {a=64, r=255, g=114, b=0},	-- //
 	groups = {water=3, liquid=3, puts_out_fire=1},		-- //
 })
 
@@ -182,7 +182,7 @@ minetest.register_node("fluide:or_source", {			-- Declaration du nom de l'item
 	liquid_alternative_source = "fluide:or_source",		-- //
 	liquid_viscosity = WATER_VISC,
 	damage_per_second = 20*2,
-	post_effect_color = {a=64, r=100, g=100, b=200},	-- //
+	post_effect_color = {a=64, r=255, g=255, b=0},	-- //
 	groups = {water=3, liquid=3, puts_out_fire=1},		-- //
 })
 
@@ -214,7 +214,7 @@ minetest.register_node("fluide:gazole_flowing", {			-- on enregistre le nom de l
 	liquid_alternative_flowing = "fluide:gazole_flowing",	-- //
 	liquid_alternative_source = "fluide:gazole_source",		-- //
 	liquid_viscosity = WATER_VISC,				-- //
-	post_effect_color = {a=64, r=100, g=100, b=200},	-- //
+	post_effect_color = {a=64, r=255, g=255, b=0},	-- //
 	groups = {water=3, liquid=3, flammable=1},		-- //
 	
 	
